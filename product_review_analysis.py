@@ -29,13 +29,15 @@ def tally(positive_words, negative_words, reviews):
     positive_counter = 0
     negative_counter = 0
     for review in reviews:
+        review = review.lower()
         for positive_word in positive_words:
             if positive_word in review:
+                print(positive_word)
                 positive_counter += 1
         for negative_word in negative_words:
             if negative_word in review:
-                negative_counter -= 1
-                
-# count()
-#startwith()
-#find()
+                print(negative_word)
+                negative_counter += 1
+    print(positive_counter, negative_counter)
+tally(positive_words, negative_words, reviews)
+
