@@ -41,3 +41,12 @@ def tally(positive_words, negative_words, reviews):
     print(positive_counter, negative_counter)
 tally(positive_words, negative_words, reviews)
 
+def summerary():
+    finish = 0
+    counter = ""
+    for review in reviews:
+       sliced_review = review[:30]
+       sliced_list = sliced_review.split()
+       sliced_list.pop(-1)
+       print(" ".join(sliced_list) + "...")
+summerary()
